@@ -5,8 +5,12 @@ method_reload
 
 _fine grained code reloading_
 
-`method_reload` enables you to reload method code on the fly. Just the
-code for the method is reloaded - not the entire file.
+`method_reload` enables you to reload method code on the fly. It
+precisely targets the code of the method - it does not
+reload the entire file.
+
+`method_reload` provides the `Method#reload` and
+`UnboundMethod#reload` methods.
 
 * Install the [gem](https://rubygems.org/gems/method_reload): `gem install method_reload`
 * Read the [documentation](http://rdoc.info/github/banister/method_reload/master/file/README.md)
@@ -24,6 +28,7 @@ Example: Example
     Hello.new.hello #=> "hello world"
 
     # file edited here and "hello world" changed to "goodbye"
+    
     # now we reload
     Hello.instance_method(:hello).reload
 
@@ -33,13 +38,13 @@ Example: Example
 Features and limitations
 -------------------------
 
-## Features:
+### Features:
 
 * Only reloads the code for the method.
 * Works with any kind of method: class methods, instance methods.
 * Fast.
 
-## Limitations:
+### Limitations:
 
 * Updated method definition must start on exactly the same line as the
   original. This limitation will be overcome in a later version.
