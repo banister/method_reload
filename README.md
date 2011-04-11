@@ -42,6 +42,7 @@ Features and limitations
 
 * Only reloads the code for the method.
 * Works with any kind of method: class methods, instance methods.
+* Works in MRI 1.8 and 1.9, Rubinius, and JRuby running Ruby 1.9
 
 ### Limitations:
 
