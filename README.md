@@ -42,7 +42,6 @@ Features and limitations
 
 * Only reloads the code for the method.
 * Works with any kind of method: class methods, instance methods.
-* Fast.
 
 ### Limitations:
 
