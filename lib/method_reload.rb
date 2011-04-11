@@ -10,7 +10,7 @@ module MethodReload
     # @example method
     #   method(:hello).reload
     # @example instance method
-    #   instance_method(:goodbye)
+    #   instance_method(:goodbye).reload
     def reload
       owner.module_eval source, *source_location
     end
